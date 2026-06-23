@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Pantallas principales del Gestor de Tareas ICE</title>
+  <desc id="desc">Wireframe visual basado en Material UI para dashboard, listado, formulario, sugerencia ICE y resumen confirmado.</desc>
+
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .bg { fill: #f5f7fb; }
+      .surface { fill: #ffffff; stroke: #d6dce8; stroke-width: 1; }
+      .surface-soft { fill: #f8fafc; stroke: #d6dce8; stroke-width: 1; }
+      .primary { fill: #1976d2; }
+      .primary-soft { fill: #e3f2fd; }
+      .success-soft { fill: #e8f5e9; }
+      .warning-soft { fill: #fff8e1; }
+      .text { fill: #1f2937; font-family: Arial, sans-serif; }
+      .muted { fill: #64748b; font-family: Arial, sans-serif; }
+      .white { fill: #ffffff; font-family: Arial, sans-serif; }
+      .label { fill: #334155; font-family: Arial, sans-serif; font-size: 13px; }
+      .caption { fill: #64748b; font-family: Arial, sans-serif; font-size: 12px; }
+      .title { fill: #111827; font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; }
+      .section-title { fill: #111827; font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; }
+      .small-title { fill: #111827; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; }
+      .button-text { fill: #ffffff; font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; }
+      .outlined-button-text { fill: #1976d2; font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; }
+      .chip-text { fill: #0f172a; font-family: Arial, sans-serif; font-size: 11px; font-weight: 700; }
+      .line { stroke: #d6dce8; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1440" height="1040"/>
+  <text class="title" x="48" y="46">Gestor de Tareas ICE - estructura visual Material UI</text>
+  <text class="muted" x="48" y="72" font-size="14">Pantallas y estados clave para implementar el flujo de creacion, revision IA y confirmacion.</text>
+
+  <!-- Main layout -->
+  <rect class="surface" x="48" y="104" width="640" height="402" rx="8" filter="url(#shadow)"/>
+  <rect class="primary" x="48" y="104" width="640" height="56" rx="8"/>
+  <rect class="primary" x="48" y="142" width="640" height="18"/>
+  <text class="white" x="72" y="138" font-size="18" font-weight="700">TaskDashboard</text>
+  <rect x="548" y="118" width="112" height="30" rx="15" fill="#ffffff"/>
+  <text class="outlined-button-text" x="573" y="138">Crear</text>
+
+  <rect class="surface-soft" x="72" y="184" width="592" height="54" rx="6"/>
+  <text class="section-title" x="92" y="207">Toolbar</text>
+  <rect class="primary-soft" x="438" y="196" width="100" height="28" rx="14"/>
+  <text class="chip-text" x="456" y="215">Orden ICE</text>
+  <rect class="success-soft" x="548" y="196" width="92" height="28" rx="14"/>
+  <text class="chip-text" x="568" y="215">Pendientes</text>
+
+  <rect class="surface" x="72" y="262" width="372" height="214" rx="8"/>
+  <text class="section-title" x="92" y="288">TaskListSection</text>
+  <rect class="surface-soft" x="92" y="308" width="332" height="58" rx="6"/>
+  <text class="small-title" x="112" y="332">Preparar demo final</text>
+  <text class="caption" x="112" y="352">ICE 16.0 - Pendiente</text>
+  <rect class="surface-soft" x="92" y="380" width="332" height="58" rx="6"/>
+  <text class="small-title" x="112" y="404">Documentar alcance</text>
+  <text class="caption" x="112" y="424">ICE 12.3 - Completada</text>
+
+  <rect class="surface" x="464" y="262" width="200" height="214" rx="8"/>
+  <text class="section-title" x="484" y="288">TaskSummary</text>
+  <rect class="primary-soft" x="484" y="310" width="160" height="72" rx="6"/>
+  <text class="caption" x="502" y="335">ICE sugerido</text>
+  <text class="text" x="502" y="368" font-size="28" font-weight="700">16.0</text>
+  <line class="line" x1="484" y1="402" x2="644" y2="402"/>
+  <text class="caption" x="484" y="428">Impacto 8 / Confianza 8</text>
+  <text class="caption" x="484" y="450">Esfuerzo 4</text>
+
+  <!-- Task list screen -->
+  <rect class="surface" x="728" y="104" width="312" height="402" rx="8" filter="url(#shadow)"/>
+  <text class="section-title" x="752" y="138">Listado de tareas</text>
+  <text class="caption" x="752" y="162">Vista principal con orden por ICE.</text>
+  <rect class="primary-soft" x="752" y="188" width="264" height="68" rx="8"/>
+  <text class="small-title" x="772" y="214">Preparar demo final</text>
+  <text class="caption" x="772" y="236">ICE 16.0</text>
+  <circle cx="976" cy="222" r="14" fill="#1976d2"/>
+  <text class="white" x="972" y="227" font-size="13">i</text>
+  <rect class="surface-soft" x="752" y="272" width="264" height="68" rx="8"/>
+  <text class="small-title" x="772" y="298">Crear README</text>
+  <text class="caption" x="772" y="320">ICE pendiente</text>
+  <rect class="surface-soft" x="752" y="356" width="264" height="68" rx="8"/>
+  <text class="small-title" x="772" y="382">Revisar estilos MUI</text>
+  <text class="caption" x="772" y="404">ICE 9.5</text>
+  <rect class="primary" x="942" y="438" width="48" height="48" rx="24"/>
+  <text class="white" x="960" y="469" font-size="26">+</text>
+
+  <!-- Create/edit form -->
+  <rect class="surface" x="1080" y="104" width="312" height="402" rx="8" filter="url(#shadow)"/>
+  <text class="section-title" x="1104" y="138">CreateTaskForm</text>
+  <rect class="surface" x="1104" y="170" width="264" height="56" rx="4"/>
+  <text class="caption" x="1118" y="190">Titulo</text>
+  <text class="text" x="1118" y="211" font-size="14">Preparar demo final</text>
+  <rect class="surface" x="1104" y="244" width="264" height="104" rx="4"/>
+  <text class="caption" x="1118" y="264">Descripcion</text>
+  <text class="text" x="1118" y="288" font-size="14">Explicar el MVP y mostrar</text>
+  <text class="text" x="1118" y="308" font-size="14">la priorizacion ICE.</text>
+  <rect class="primary" x="1104" y="370" width="164" height="40" rx="20"/>
+  <text class="button-text" x="1124" y="395">Sugerir ICE</text>
+  <rect class="surface" x="1278" y="370" width="90" height="40" rx="20"/>
+  <text class="outlined-button-text" x="1300" y="395">Cerrar</text>
+
+  <!-- AI recommendation -->
+  <rect class="surface" x="48" y="560" width="424" height="360" rx="8" filter="url(#shadow)"/>
+  <text class="section-title" x="72" y="594">AIRecommendationPanel</text>
+  <text class="caption" x="72" y="618">Revision de sugerencia antes de confirmar.</text>
+  <rect class="primary-soft" x="72" y="642" width="376" height="88" rx="8"/>
+  <text class="caption" x="96" y="668">Puntuacion ICE</text>
+  <text class="text" x="96" y="706" font-size="34" font-weight="700">16.0</text>
+  <rect class="surface-soft" x="72" y="754" width="112" height="64" rx="6"/>
+  <text class="caption" x="94" y="780">Impacto</text>
+  <text class="text" x="116" y="806" font-size="22" font-weight="700">8</text>
+  <rect class="surface-soft" x="204" y="754" width="112" height="64" rx="6"/>
+  <text class="caption" x="224" y="780">Confianza</text>
+  <text class="text" x="248" y="806" font-size="22" font-weight="700">8</text>
+  <rect class="surface-soft" x="336" y="754" width="112" height="64" rx="6"/>
+  <text class="caption" x="360" y="780">Esfuerzo</text>
+  <text class="text" x="382" y="806" font-size="22" font-weight="700">4</text>
+  <rect class="warning-soft" x="72" y="840" width="376" height="52" rx="6"/>
+  <text class="caption" x="92" y="864">Razon IA: alto impacto para presentar</text>
+  <text class="caption" x="92" y="882">el proyecto con esfuerzo moderado.</text>
+
+  <!-- Manual edit and confirmation -->
+  <rect class="surface" x="512" y="560" width="424" height="360" rx="8" filter="url(#shadow)"/>
+  <text class="section-title" x="536" y="594">Edicion manual opcional</text>
+  <text class="caption" x="536" y="618">El usuario puede ajustar la sugerencia.</text>
+  <line x1="560" y1="670" x2="888" y2="670" stroke="#1976d2" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="824" cy="670" r="12" fill="#1976d2"/>
+  <text class="label" x="560" y="650">Impacto</text>
+  <text class="label" x="856" y="650">8</text>
+  <line x1="560" y1="738" x2="888" y2="738" stroke="#1976d2" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="824" cy="738" r="12" fill="#1976d2"/>
+  <text class="label" x="560" y="718">Confianza</text>
+  <text class="label" x="856" y="718">8</text>
+  <line x1="560" y1="806" x2="888" y2="806" stroke="#1976d2" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="692" cy="806" r="12" fill="#1976d2"/>
+  <text class="label" x="560" y="786">Esfuerzo</text>
+  <text class="label" x="856" y="786">4</text>
+  <rect class="surface" x="620" y="850" width="132" height="40" rx="20"/>
+  <text class="outlined-button-text" x="650" y="875">Editar</text>
+  <rect class="primary" x="764" y="850" width="132" height="40" rx="20"/>
+  <text class="button-text" x="788" y="875">Confirmar</text>
+
+  <!-- Confirmed summary -->
+  <rect class="surface" x="976" y="560" width="416" height="360" rx="8" filter="url(#shadow)"/>
+  <text class="section-title" x="1000" y="594">TaskConfirmedSummary</text>
+  <rect class="success-soft" x="1000" y="626" width="368" height="70" rx="8"/>
+  <text class="small-title" x="1024" y="654">Tarea confirmada</text>
+  <text class="caption" x="1024" y="676">La tarea se anadio al estado local.</text>
+  <rect class="surface-soft" x="1000" y="724" width="368" height="112" rx="8"/>
+  <text class="small-title" x="1024" y="754">Preparar demo final</text>
+  <text class="caption" x="1024" y="778">Pendiente - ICE 16.0</text>
+  <text class="caption" x="1024" y="802">Impacto 8 / Confianza 8 / Esfuerzo 4</text>
+  <rect class="primary" x="1068" y="860" width="148" height="40" rx="20"/>
+  <text class="button-text" x="1090" y="885">Ver en lista</text>
+  <rect class="surface" x="1228" y="860" width="112" height="40" rx="20"/>
+  <text class="outlined-button-text" x="1248" y="885">Nueva</text>
+
+  <!-- Flow hints -->
+  <path d="M688 304 C710 304 710 304 728 304" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M1040 304 C1060 304 1060 304 1080 304" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M1236 506 C1236 530 260 530 260 560" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M472 740 C492 740 492 740 512 740" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M936 740 C956 740 956 740 976 740" fill="none" stroke="#94a3b8" stroke-width="2"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

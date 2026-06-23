@@ -1,0 +1,36 @@
+flowchart TD
+  A[App] --> B["/"]
+  B --> C[TaskDashboard]
+
+  C --> D[AppBar]
+  C --> E[TaskToolbar]
+  C --> F[TaskListSection]
+  C --> G[TaskDetailSection]
+
+  D --> D1[Titulo de app]
+  D --> D2[Accion principal: Crear tarea]
+
+  E --> E1[Ordenar por ICE]
+  E --> E2[Ver pendientes]
+  E --> E3[Ver completadas]
+
+  F --> F1[EmptyState]
+  F --> F2[TaskList]
+  F2 --> F3[TaskCard]
+  F3 --> F4[Acciones: ver, editar, completar, eliminar]
+
+  G --> G1[TaskSummary]
+  G --> G2[IceScorePanel]
+  G --> G3[AiReasonPanel]
+
+  C --> H[TaskFormDialog]
+  H --> H1[CreateTaskForm]
+  H --> H2[AIRecommendationPanel]
+  H --> H3[ManualIceFields]
+  H --> H4[ConfirmActions]
+
+  H4 --> C
+  F4 --> H
+  F4 --> G
+
+  I[Sin rutas adicionales requeridas] -.-> B

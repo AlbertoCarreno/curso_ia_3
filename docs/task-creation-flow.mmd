@@ -1,0 +1,39 @@
+flowchart TD
+  A[Usuario entra en la app] --> B[TaskDashboard]
+  B --> C[Se muestra listado de tareas]
+  C --> D{Hay tareas?}
+  D -->|Si| E[TaskList con tareas existentes]
+  D -->|No| F[EmptyState: sin tareas]
+  E --> G[Usuario pulsa Crear tarea]
+  F --> G
+
+  G --> H[TaskFormDialog se abre]
+  H --> I[Usuario introduce titulo]
+  I --> J[Usuario introduce descripcion]
+  J --> K{Formulario valido?}
+  K -->|No| L[Mostrar validacion en TextField]
+  L --> I
+  K -->|Si| M[Usuario pulsa Sugerir ICE con IA]
+
+  M --> N[Estado loading en AIRecommendationPanel]
+  N --> O[aiService solicita impacto, confianza y esfuerzo]
+  O --> P{Respuesta valida?}
+  P -->|No| Q[Mostrar error recuperable]
+  Q --> R{Reintentar o editar manualmente?}
+  R -->|Reintentar| M
+  R -->|Editar manualmente| S[Campos ICE editables]
+
+  P -->|Si| T[Mostrar sugerencia ICE]
+  T --> U[Usuario revisa impacto, confianza, esfuerzo y razon]
+  U --> V{Aceptar sugerencia?}
+  V -->|Editar| S
+  S --> W[Usuario ajusta valores ICE]
+  W --> X[Recalcular puntuacion ICE local]
+  V -->|Aceptar| Y[Usar valores sugeridos]
+  X --> Z[Usuario confirma tarea]
+  Y --> Z
+
+  Z --> AA[Crear tarea en estado local]
+  AA --> AB[Cerrar dialog]
+  AB --> AC[TaskDashboard actualizado]
+  AC --> AD[TaskList muestra tarea confirmada]
