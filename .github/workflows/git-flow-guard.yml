@@ -1,0 +1,34 @@
+name: Git Flow Guard
+
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
+      - ready_for_review
+
+jobs:
+  validate-pr-target:
+    name: Validate PR target
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enforce Git Flow branches
+        shell: bash
+        run: |
+          base_branch="${{ github.base_ref }}"
+          head_branch="${{ github.head_ref }}"
+
+          if [[ "$base_branch" == "main" && "$head_branch" != "dev" ]]; then
+            echo "Only pull requests from dev can target main."
+            exit 1
+          fi
+
+          if [[ "$base_branch" == "dev" && "$head_branch" == "main" ]]; then
+            echo "Issue work must not be merged from main into dev."
+            exit 1
+          fi
