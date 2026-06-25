@@ -2,18 +2,18 @@
 
 ## Estructura de carpetas
 
-| Carpeta / archivo | Regla |
-| --- | --- |
-| `src/` | Raiz del codigo de aplicacion. |
-| `src/main.tsx` | Solo arranque de React y providers globales. |
-| `src/App.tsx` | Composicion principal, sin logica pesada. |
-| `src/components/` | Componentes reutilizables de UI. |
-| `src/features/` | Codigo agrupado por funcionalidad cuando crezca. |
-| `src/hooks/` | Hooks compartidos entre componentes. |
-| `src/services/` | Llamadas a APIs externas. |
-| `src/types/` | Tipos compartidos del dominio. |
-| `src/utils/` | Funciones puras y helpers pequenos. |
-| `src/theme/` | Configuracion de Material UI y tokens visuales. |
+| Carpeta / archivo | Regla                                            |
+| ----------------- | ------------------------------------------------ |
+| `src/`            | Raiz del codigo de aplicacion.                   |
+| `src/main.tsx`    | Solo arranque de React y providers globales.     |
+| `src/App.tsx`     | Composicion principal, sin logica pesada.        |
+| `src/components/` | Componentes reutilizables de UI.                 |
+| `src/features/`   | Codigo agrupado por funcionalidad cuando crezca. |
+| `src/hooks/`      | Hooks compartidos entre componentes.             |
+| `src/services/`   | Llamadas a APIs externas.                        |
+| `src/types/`      | Tipos compartidos del dominio.                   |
+| `src/utils/`      | Funciones puras y helpers pequenos.              |
+| `src/theme/`      | Configuracion de Material UI y tokens visuales.  |
 
 ## Convenciones de nombres
 
@@ -39,17 +39,17 @@
 
 ## Organizacion de componentes con sus responsabilidades
 
-| Tipo | Responsabilidad |
-| --- | --- |
-| `App` | Orquestar layout principal y estado de alto nivel. |
-| `Page` | Representar una vista completa si existe mas de una. |
-| `Feature` | Agrupar UI y logica de una funcionalidad concreta. |
-| `Form` | Gestionar campos, validacion local y submit. |
-| `List` | Renderizar colecciones y delegar acciones. |
-| `Item` | Mostrar un elemento y emitir callbacks. |
-| `Dialog` | Confirmar o editar informacion puntual. |
-| `Display` | Mostrar datos calculados sin efectos externos. |
-| `Layout` | Distribucion visual sin reglas de negocio. |
+| Tipo      | Responsabilidad                                      |
+| --------- | ---------------------------------------------------- |
+| `App`     | Orquestar layout principal y estado de alto nivel.   |
+| `Page`    | Representar una vista completa si existe mas de una. |
+| `Feature` | Agrupar UI y logica de una funcionalidad concreta.   |
+| `Form`    | Gestionar campos, validacion local y submit.         |
+| `List`    | Renderizar colecciones y delegar acciones.           |
+| `Item`    | Mostrar un elemento y emitir callbacks.              |
+| `Dialog`  | Confirmar o editar informacion puntual.              |
+| `Display` | Mostrar datos calculados sin efectos externos.       |
+| `Layout`  | Distribucion visual sin reglas de negocio.           |
 | `Service` | Nunca debe mezclarse dentro de componentes visuales. |
 
 ## Uso de hooks
@@ -142,15 +142,37 @@
 
 ## Librerias aprobadas
 
-| Libreria | Uso aprobado |
-| --- | --- |
-| `react` | Construccion de UI. |
-| `react-dom` | Renderizado en navegador. |
-| `typescript` | Tipado estatico. |
-| `vite` | Desarrollo local y build. |
-| `@mui/material` | Componentes Material Design. |
-| `@mui/icons-material` | Iconos Material UI. |
-| `@emotion/react` | Dependencia requerida por Material UI. |
-| `@emotion/styled` | Dependencia requerida por Material UI. |
-| `eslint` | Reglas basicas de calidad si ya esta configurado. |
-| Ninguna nueva | Solo anadir dependencias con beneficio claro. |
+| Libreria                            | Uso aprobado                                             |
+| ----------------------------------- | -------------------------------------------------------- |
+| `react`                             | Construccion de UI.                                      |
+| `react-dom`                         | Renderizado en navegador.                                |
+| `typescript`                        | Tipado estatico.                                         |
+| `vite`                              | Desarrollo local y build.                                |
+| `@mui/material`                     | Componentes Material Design.                             |
+| `@mui/icons-material`               | Iconos Material UI.                                      |
+| `@emotion/react`                    | Dependencia requerida por Material UI.                   |
+| `@emotion/styled`                   | Dependencia requerida por Material UI.                   |
+| `eslint`                            | Reglas basicas de calidad si ya esta configurado.        |
+| `@eslint/js`                        | Configuracion recomendada base de ESLint.                |
+| `typescript-eslint`                 | Reglas recomendadas de ESLint para TypeScript.           |
+| `eslint-plugin-react`               | Reglas recomendadas de ESLint para React.                |
+| `eslint-plugin-react-hooks`         | Reglas recomendadas de ESLint para Hooks.                |
+| `eslint-plugin-import-x`            | Validacion y orden basico de importaciones.              |
+| `eslint-import-resolver-typescript` | Resolucion de imports TypeScript para ESLint.            |
+| `prettier`                          | Formato automatico de codigo y configuracion.            |
+| `eslint-config-prettier`            | Desactivar reglas de ESLint que conflicten con Prettier. |
+| `globals`                           | Variables globales de navegador para ESLint.             |
+| Ninguna nueva                       | Solo anadir dependencias con beneficio claro.            |
+
+## Herramientas de calidad
+
+- [ ] Usar `npm run lint` para revisar reglas de ESLint.
+
+- [ ] Usar `npm run lint:fix` para aplicar correcciones automaticas de ESLint.
+
+- [ ] Usar `npm run format` para formatear el proyecto con Prettier.
+
+- [ ] Usar `npm run format:check` para comprobar formato sin modificar archivos.
+
+- [ ] Mantener `eslint-config-prettier` al final de `eslint.config.js` para evitar conflictos entre
+      ESLint y Prettier.
